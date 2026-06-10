@@ -1,0 +1,1069 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Creative Network - Agensi kreatif digital yang menghidupkan ide menjadi pengalaman visual dan digital yang bermakna. Jasa desain branding, website, digital marketing, dan produksi konten.">
+    <meta name="keywords" content="creative agency, desain grafis, website, branding, digital marketing, video production, indonesia, creative network">
+    <title>Creative Network • Company Profile</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&amp;family=Playfair+Display:wght@700&amp;display=swap');
+        
+        :root {
+            --primary: #6366f1;
+        }
+        
+        .tail-container {
+            font-family: 'Inter', system_ui, sans-serif;
+        }
+        
+        .heading-serif {
+            font-family: 'Playfair Display', Georgia, serif;
+            font-weight: 700;
+            line-height: 1.1;
+        }
+
+        .section-header {
+            position: relative;
+            display: inline-block;
+        }
+        
+        .section-header:after {
+            content: '';
+            position: absolute;
+            bottom: -8px;
+            left: 0;
+            width: 60px;
+            height: 3px;
+            background: linear-gradient(to right, #6366f1, #a5b4fc);
+            border-radius: 3px;
+        }
+
+        .nav-link {
+            position: relative;
+            transition: color 0.2s ease;
+        }
+        
+        .nav-link:after {
+            content: '';
+            position: absolute;
+            width: 0;
+            height: 2px;
+            bottom: -2px;
+            left: 0;
+            background-color: #6366f1;
+            transition: width 0.3s ease;
+        }
+        
+        .nav-link:hover:after,
+        .nav-link.active:after {
+            width: 100%;
+        }
+
+        .service-card, .portfolio-card {
+            transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+        
+        .service-card:hover, .portfolio-card:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 20px 25px -5px rgb(0 0 0 / 0.1), 0 8px 10px -6px rgb(0 0 0 / 0.1);
+        }
+
+        .portfolio-card img {
+            transition: transform 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+        
+        .portfolio-card:hover img {
+            transform: scale(1.08);
+        }
+
+        .nav-scrolled {
+            background-color: rgba(15, 23, 42, 0.95);
+            backdrop-filter: blur(12px);
+        }
+
+        .stat-number {
+            font-variant-numeric: tabular-nums;
+        }
+
+        .modal {
+            animation: modalPop 0.2s ease-out forwards;
+        }
+
+        @keyframes modalPop {
+            from {
+                opacity: 0;
+                transform: scale(0.95) translateY(20px);
+            }
+            to {
+                opacity: 1;
+                transform: scale(1) translateY(0);
+            }
+        }
+
+        .creative-gradient {
+            background: linear-gradient(135deg, #6366f1 0%, #a855f7 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        .glass {
+            background: rgba(255, 255, 255, 0.08);
+            backdrop-filter: blur(16px);
+        }
+
+        .work-grid {
+            scrollbar-width: none;
+        }
+
+        .fade-in {
+            opacity: 0;
+            transform: translateY(20px);
+            transition: all 0.6s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+        
+        .fade-in.visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        .nav-mobile {
+            animation: slideDown 0.3s ease forwards;
+        }
+
+        .testimonial {
+            transition: all 0.4s ease;
+        }
+    </style>
+</head>
+<body class="tail-container bg-slate-950 text-slate-200">
+    <!-- NAVBAR -->
+    <nav id="navbar" class="fixed top-0 left-0 right-0 z-50 transition-all duration-300 bg-slate-950/90">
+        <div class="max-w-7xl mx-auto px-6">
+            <div class="flex items-center justify-between h-20">
+                <!-- Logo -->
+                <div class="flex items-center gap-x-3">
+                    <div class="w-10 h-10 bg-indigo-600 rounded-2xl flex items-center justify-center shadow-inner">
+                        <span class="text-white font-bold text-2xl tracking-tighter">CN</span>
+                    </div>
+                    <div>
+                        <div class="font-semibold text-2xl tracking-tighter">Creative Network</div>
+                        <div class="text-[10px] text-slate-400 -mt-1">EST 2021</div>
+                    </div>
+                </div>
+
+                <!-- Desktop Menu -->
+                <div class="hidden md:flex items-center gap-x-9 text-sm font-medium">
+                    <a href="#beranda" class="nav-link text-slate-300 hover:text-white px-1">Beranda</a>
+                    <a href="#tentang" class="nav-link text-slate-300 hover:text-white px-1">Tentang</a>
+                    <a href="#layanan" class="nav-link text-slate-300 hover:text-white px-1">Layanan</a>
+                    <a href="#portfolio" class="nav-link text-slate-300 hover:text-white px-1">Portfolio</a>
+                    <a href="#kontak" class="nav-link text-slate-300 hover:text-white px-1">Kontak</a>
+                </div>
+
+                <!-- CTA & Mobile -->
+                <div class="flex items-center gap-x-4">
+                    <a href="#kontak" 
+                       class="hidden sm:inline-flex items-center px-5 py-2.5 text-sm font-semibold bg-white text-slate-950 rounded-2xl hover:bg-slate-100 active:bg-slate-200 transition-colors">
+                        <span>Mulai Proyek</span>
+                    </a>
+                    
+                    <!-- Mobile Menu Button -->
+                    <button id="mobile-menu-btn"
+                            class="md:hidden w-11 h-11 flex items-center justify-center text-xl text-slate-300 hover:text-white hover:bg-slate-900 rounded-2xl transition-colors"
+                            aria-label="Buka menu">
+                        <i class="fa-solid fa-bars"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Mobile Menu -->
+        <div id="mobile-menu" class="hidden md:hidden border-t border-slate-800 bg-slate-950">
+            <div class="px-6 py-6 flex flex-col gap-y-1 text-base font-medium">
+                <a href="#beranda" class="mobile-nav-link px-4 py-3 rounded-2xl hover:bg-slate-900">Beranda</a>
+                <a href="#tentang" class="mobile-nav-link px-4 py-3 rounded-2xl hover:bg-slate-900">Tentang Kami</a>
+                <a href="#layanan" class="mobile-nav-link px-4 py-3 rounded-2xl hover:bg-slate-900">Layanan</a>
+                <a href="#portfolio" class="mobile-nav-link px-4 py-3 rounded-2xl hover:bg-slate-900">Portfolio</a>
+                <a href="#kontak" class="mobile-nav-link px-4 py-3 rounded-2xl hover:bg-slate-900">Kontak</a>
+                
+                <div class="pt-4 px-4">
+                    <a href="#kontak" 
+                       class="block w-full text-center px-6 py-3 bg-white text-slate-950 font-semibold rounded-2xl text-sm active:bg-slate-100">
+                        Mulai Proyek
+                    </a>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- HERO / BERANDA -->
+    <section id="beranda" class="pt-20 min-h-[100dvh] flex items-center relative overflow-hidden bg-slate-950">
+        <div class="absolute inset-0 bg-[radial-gradient(#334155_0.8px,transparent_1px)] bg-[length:5px_5px] opacity-40"></div>
+        
+        <div class="max-w-7xl mx-auto px-6 pt-12 pb-20 relative z-10">
+            <div class="max-w-4xl">
+                <div class="inline-flex items-center gap-x-2 bg-slate-900 border border-slate-800 rounded-3xl px-4 py-1 mb-6 text-sm">
+                    <div class="w-2 h-2 bg-emerald-400 rounded-full animate-pulse"></div>
+                    <span class="text-emerald-400 font-medium">Menerima proyek baru 2026</span>
+                </div>
+                
+                <h1 class="text-6xl md:text-7xl lg:text-7xl font-semibold tracking-tighter leading-[1.05] mb-6">
+                    Kami menciptakan<br>
+                    <span class="creative-gradient">pengalaman digital</span><br>
+                    yang tak terlupakan.
+                </h1>
+                
+                <p class="max-w-xl text-xl text-slate-400 mb-10 leading-relaxed">
+                    Creative Network adalah studio kreatif yang membantu brand dan perusahaan 
+                    membangun identitas visual, website, dan konten digital berkelas.
+                </p>
+
+                <div class="flex flex-col sm:flex-row items-start sm:items-center gap-4">
+                    <a href="#portfolio" 
+                       class="group inline-flex items-center justify-center gap-x-3 bg-indigo-600 hover:bg-indigo-500 active:bg-indigo-700 transition-all px-8 py-4 rounded-3xl font-semibold text-lg w-full sm:w-auto">
+                        <span>Lihat Karya Kami</span>
+                        <i class="fa-solid fa-arrow-right group-active:translate-x-0.5 transition"></i>
+                    </a>
+                    
+                    <a href="#tentang" 
+                       class="inline-flex items-center justify-center gap-x-2 px-7 py-4 rounded-3xl font-semibold text-lg border border-slate-700 hover:bg-slate-900 transition-colors w-full sm:w-auto">
+                        <span>Tentang Kami</span>
+                    </a>
+                </div>
+
+                <div class="mt-14 flex items-center gap-x-8 text-sm">
+                    <div class="flex -space-x-3">
+                        <img class="w-8 h-8 rounded-full ring-2 ring-slate-950 object-cover" src="https://picsum.photos/id/1005/32/32" alt="">
+                        <img class="w-8 h-8 rounded-full ring-2 ring-slate-950 object-cover" src="https://picsum.photos/id/1011/32/32" alt="">
+                        <img class="w-8 h-8 rounded-full ring-2 ring-slate-950 object-cover" src="https://picsum.photos/id/1009/32/32" alt="">
+                    </div>
+                    <div class="text-slate-400">
+                        Dipercaya oleh <span class="text-white font-medium">120+</span> brand &amp; startup
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Scroll indicator -->
+        <div class="absolute bottom-10 left-1/2 hidden md:block">
+            <a href="#tentang" class="flex flex-col items-center text-xs tracking-[2px] text-slate-500 hover:text-slate-400">
+                <span class="mb-1.5">SCROLL</span>
+                <i class="fa-solid fa-chevron-down"></i>
+            </a>
+        </div>
+    </section>
+
+    <!-- STATS -->
+    <div class="border-y border-slate-800 bg-slate-900/50">
+        <div class="max-w-7xl mx-auto px-6 grid grid-cols-2 md:grid-cols-4 gap-y-8 py-8 text-center">
+            <div>
+                <div class="text-4xl font-semibold tracking-tight text-white stat-number" data-target="120">120</div>
+                <div class="text-sm text-slate-400 mt-1">Proyek Selesai</div>
+            </div>
+            <div>
+                <div class="text-4xl font-semibold tracking-tight text-white stat-number" data-target="85">85</div>
+                <div class="text-sm text-slate-400 mt-1">Klien Bahagia</div>
+            </div>
+            <div>
+                <div class="text-4xl font-semibold tracking-tight text-white stat-number" data-target="14">14</div>
+                <div class="text-sm text-slate-400 mt-1">Negara Terjangkau</div>
+            </div>
+            <div>
+                <div class="text-4xl font-semibold tracking-tight text-white stat-number" data-target="7">7</div>
+                <div class="text-sm text-slate-400 mt-1">Penghargaan</div>
+            </div>
+        </div>
+    </div>
+
+    <!-- TENTANG KAMI -->
+    <section id="tentang" class="max-w-7xl mx-auto px-6 pt-20 pb-16">
+        <div class="grid md:grid-cols-12 gap-x-12 items-center">
+            <div class="md:col-span-5 mb-10 md:mb-0">
+                <div class="sticky top-24">
+                    <span class="text-indigo-400 font-semibold tracking-widest text-sm">SEJAK 2021</span>
+                    <h2 class="text-5xl tracking-tighter font-semibold mt-3 mb-6 leading-none">Cerita di balik<br>Creative Network.</h2>
+                    
+                    <div class="prose prose-invert text-slate-400">
+                        <p class="text-[15px] leading-relaxed">
+                            Kami adalah tim kecil yang percaya bahwa desain yang baik dapat mengubah cara orang memandang sebuah brand.
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="md:col-span-7 text-[15px] text-slate-300 space-y-6 leading-relaxed">
+                <p>
+                    Creative Network didirikan di Yogyakarta dengan misi sederhana: membantu bisnis lokal dan startup 
+                    memiliki kehadiran digital yang kuat dan estetika yang konsisten.
+                </p>
+                <p>
+                    Dalam 4 tahun terakhir, kami telah bekerja sama dengan lebih dari 85 klien dari berbagai industri — 
+                    mulai dari brand fashion, F&amp;B, teknologi, pendidikan, hingga institusi pemerintahan.
+                </p>
+                <p>
+                    Kami bukan sekadar vendor. Kami adalah partner kreatif yang ikut memikirkan strategi, 
+                    memahami audiens, dan menghasilkan karya yang tidak hanya cantik, tapi juga efektif.
+                </p>
+
+                <div class="pt-4 grid grid-cols-1 sm:grid-cols-3 gap-4 text-sm">
+                    <div class="bg-slate-900 border border-slate-800 rounded-3xl p-5">
+                        <div class="font-semibold mb-1 text-white">Visi</div>
+                        <div class="text-slate-400 text-sm">Menjadi studio kreatif paling dihormati di Asia Tenggara untuk kualitas dan integritas.</div>
+                    </div>
+                    <div class="bg-slate-900 border border-slate-800 rounded-3xl p-5">
+                        <div class="font-semibold mb-1 text-white">Misi</div>
+                        <div class="text-slate-400 text-sm">Menciptakan karya yang bermakna dengan proses yang jujur, kolaboratif, dan menyenangkan.</div>
+                    </div>
+                    <div class="bg-slate-900 border border-slate-800 rounded-3xl p-5">
+                        <div class="font-semibold mb-1 text-white">Nilai</div>
+                        <div class="text-slate-400 text-sm">Kualitas &gt; Kuantitas • Empati • Keberanian bereksperimen • Tanggung jawab penuh.</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- LAYANAN -->
+    <section id="layanan" class="bg-slate-900 py-20 border-y border-slate-800">
+        <div class="max-w-7xl mx-auto px-6">
+            <div class="flex flex-col md:flex-row md:items-end md:justify-between mb-10">
+                <div>
+                    <span class="uppercase text-xs tracking-[3px] text-indigo-400 font-semibold">Apa yang Kami Kerjakan</span>
+                    <h2 class="text-5xl tracking-tighter font-semibold mt-2">Layanan Kami</h2>
+                </div>
+                <p class="max-w-sm text-slate-400 mt-3 md:mt-0">Kami menawarkan layanan end-to-end untuk kebutuhan branding dan digital Anda.</p>
+            </div>
+
+            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+                <!-- Service 1 -->
+                <div class="service-card group bg-slate-950 border border-slate-800 rounded-3xl p-8 flex flex-col">
+                    <div class="w-12 h-12 bg-indigo-600/10 text-indigo-400 rounded-2xl flex items-center justify-center mb-6 group-hover:bg-indigo-600 group-hover:text-white transition-colors">
+                        <i class="fa-solid fa-palette text-2xl"></i>
+                    </div>
+                    <h3 class="font-semibold text-2xl tracking-tight mb-3">Branding &amp; Identitas Visual</h3>
+                    <p class="text-slate-400 flex-1">Logo, brand guideline, visual identity system, stationery, dan semua elemen yang membuat brand Anda konsisten dan mudah dikenali.</p>
+                    <div class="pt-6 text-xs font-medium text-indigo-400 flex items-center gap-1.5">Mulai dari Rp 12jt <i class="fa-solid fa-arrow-right"></i></div>
+                </div>
+
+                <!-- Service 2 -->
+                <div class="service-card group bg-slate-950 border border-slate-800 rounded-3xl p-8 flex flex-col">
+                    <div class="w-12 h-12 bg-indigo-600/10 text-indigo-400 rounded-2xl flex items-center justify-center mb-6 group-hover:bg-indigo-600 group-hover:text-white transition-colors">
+                        <i class="fa-solid fa-laptop-code text-2xl"></i>
+                    </div>
+                    <h3 class="font-semibold text-2xl tracking-tight mb-3">Website &amp; Digital Product</h3>
+                    <p class="text-slate-400 flex-1">Website company profile, landing page, e-commerce, dashboard internal, dan aplikasi web yang cepat, responsif, serta mudah dikelola.</p>
+                    <div class="pt-6 text-xs font-medium text-indigo-400 flex items-center gap-1.5">Mulai dari Rp 18jt <i class="fa-solid fa-arrow-right"></i></div>
+                </div>
+
+                <!-- Service 3 -->
+                <div class="service-card group bg-slate-950 border border-slate-800 rounded-3xl p-8 flex flex-col">
+                    <div class="w-12 h-12 bg-indigo-600/10 text-indigo-400 rounded-2xl flex items-center justify-center mb-6 group-hover:bg-indigo-600 group-hover:text-white transition-colors">
+                        <i class="fa-solid fa-bullhorn text-2xl"></i>
+                    </div>
+                    <h3 class="font-semibold text-2xl tracking-tight mb-3">Digital Marketing</h3>
+                    <p class="text-slate-400 flex-1">Strategi konten, social media management, performance marketing (Meta &amp; Google Ads), SEO, dan email campaign yang terukur.</p>
+                    <div class="pt-6 text-xs font-medium text-indigo-400 flex items-center gap-1.5">Retainer mulai Rp 8jt/bln <i class="fa-solid fa-arrow-right"></i></div>
+                </div>
+
+                <!-- Service 4 -->
+                <div class="service-card group bg-slate-950 border border-slate-800 rounded-3xl p-8 flex flex-col">
+                    <div class="w-12 h-12 bg-indigo-600/10 text-indigo-400 rounded-2xl flex items-center justify-center mb-6 group-hover:bg-indigo-600 group-hover:text-white transition-colors">
+                        <i class="fa-solid fa-video text-2xl"></i>
+                    </div>
+                    <h3 class="font-semibold text-2xl tracking-tight mb-3">Produksi Video &amp; Motion</h3>
+                    <p class="text-slate-400 flex-1">Video promosi, company profile video, explainer, motion graphics, reels, dan konten video untuk kebutuhan marketing &amp; internal.</p>
+                    <div class="pt-6 text-xs font-medium text-indigo-400 flex items-center gap-1.5">Mulai dari Rp 9jt <i class="fa-solid fa-arrow-right"></i></div>
+                </div>
+
+                <!-- Service 5 -->
+                <div class="service-card group bg-slate-950 border border-slate-800 rounded-3xl p-8 flex flex-col">
+                    <div class="w-12 h-12 bg-indigo-600/10 text-indigo-400 rounded-2xl flex items-center justify-center mb-6 group-hover:bg-indigo-600 group-hover:text-white transition-colors">
+                        <i class="fa-solid fa-camera text-2xl"></i>
+                    </div>
+                    <h3 class="font-semibold text-2xl tracking-tight mb-3">Fotografi &amp; Konten Visual</h3>
+                    <p class="text-slate-400 flex-1">Product photography, brand shoot, corporate photography, dan pembuatan aset visual berkualitas tinggi untuk semua keperluan.</p>
+                    <div class="pt-6 text-xs font-medium text-indigo-400 flex items-center gap-1.5">Mulai dari Rp 6jt <i class="fa-solid fa-arrow-right"></i></div>
+                </div>
+
+                <!-- Service 6 -->
+                <div class="service-card group bg-slate-950 border border-slate-800 rounded-3xl p-8 flex flex-col">
+                    <div class="w-12 h-12 bg-indigo-600/10 text-indigo-400 rounded-2xl flex items-center justify-center mb-6 group-hover:bg-indigo-600 group-hover:text-white transition-colors">
+                        <i class="fa-solid fa-lightbulb text-2xl"></i>
+                    </div>
+                    <h3 class="font-semibold text-2xl tracking-tight mb-3">Konsultasi Kreatif</h3>
+                    <p class="text-slate-400 flex-1">Workshop branding, audit visual, strategi komunikasi, dan pendampingan tim internal untuk membangun kapabilitas kreatif jangka panjang.</p>
+                    <div class="pt-6 text-xs font-medium text-indigo-400 flex items-center gap-1.5">Mulai dari Rp 4jt <i class="fa-solid fa-arrow-right"></i></div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- PORTFOLIO -->
+    <section id="portfolio" class="max-w-7xl mx-auto px-6 py-20">
+        <div class="flex flex-col md:flex-row md:items-end md:justify-between mb-9">
+            <div>
+                <span class="text-xs font-semibold tracking-[2.5px] text-indigo-400">SELECTED WORK</span>
+                <h2 class="text-5xl tracking-tighter font-semibold mt-1">Portfolio Kami</h2>
+            </div>
+            <a href="#" class="mt-3 md:mt-0 text-sm font-medium inline-flex items-center gap-2 text-indigo-400 hover:text-indigo-300 group">
+                LIHAT SEMUA PROYEK 
+                <span class="group-hover:translate-x-0.5 transition"><i class="fa-solid fa-arrow-right-long"></i></span>
+            </a>
+        </div>
+
+        <!-- Filter -->
+        <div class="flex flex-wrap gap-2 mb-8" id="portfolio-filters">
+            <button data-filter="all" class="filter-btn active px-5 py-1.5 text-sm rounded-2xl bg-white text-slate-950 font-medium">Semua</button>
+            <button data-filter="branding" class="filter-btn px-5 py-1.5 text-sm rounded-2xl hover:bg-slate-900 bg-slate-900 border border-slate-700">Branding</button>
+            <button data-filter="web" class="filter-btn px-5 py-1.5 text-sm rounded-2xl hover:bg-slate-900 bg-slate-900 border border-slate-700">Website</button>
+            <button data-filter="video" class="filter-btn px-5 py-1.5 text-sm rounded-2xl hover:bg-slate-900 bg-slate-900 border border-slate-700">Video</button>
+            <button data-filter="marketing" class="filter-btn px-5 py-1.5 text-sm rounded-2xl hover:bg-slate-900 bg-slate-900 border border-slate-700">Marketing</button>
+        </div>
+
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6" id="portfolio-grid">
+            <!-- Portfolio items populated by JS -->
+        </div>
+    </section>
+
+    <!-- TESTIMONIALS -->
+    <section class="bg-slate-900 border-y border-slate-800 py-20">
+        <div class="max-w-7xl mx-auto px-6">
+            <div class="text-center mb-12">
+                <span class="text-indigo-400 text-sm font-semibold tracking-widest">KATA MEREKA</span>
+                <h2 class="text-4xl md:text-5xl tracking-tight font-semibold mt-2">Dipercaya oleh para pemimpin brand</h2>
+            </div>
+
+            <div class="grid md:grid-cols-3 gap-6 max-w-5xl mx-auto">
+                <div class="testimonial bg-slate-950 border border-slate-800 rounded-3xl p-7">
+                    <div class="flex gap-1 text-amber-400 mb-4">
+                        <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star-half-stroke"></i>
+                    </div>
+                    <p class="italic leading-relaxed text-slate-300">"Creative Network berhasil mengubah brand kami dari yang biasa saja menjadi sangat premium. Prosesnya sangat profesional dan hasilnya melebihi ekspektasi."</p>
+                    <div class="mt-6 flex items-center gap-3">
+                        <img src="https://picsum.photos/id/1012/40/40" class="w-9 h-9 rounded-full" alt="">
+                        <div>
+                            <div class="font-medium">Rina Kusuma</div>
+                            <div class="text-xs text-slate-400">Founder &amp; CEO, Loka Coffee</div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="testimonial bg-slate-950 border border-slate-800 rounded-3xl p-7">
+                    <div class="flex gap-1 text-amber-400 mb-4">
+                        <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+                    </div>
+                    <p class="italic leading-relaxed text-slate-300">"Website baru yang mereka buatkan meningkatkan konversi kami hampir 3x lipat. Timnya responsif, detail, dan benar-benar mengerti kebutuhan bisnis."</p>
+                    <div class="mt-6 flex items-center gap-3">
+                        <img src="https://picsum.photos/id/1006/40/40" class="w-9 h-9 rounded-full" alt="">
+                        <div>
+                            <div class="font-medium">Aditya Pratama</div>
+                            <div class="text-xs text-slate-400">Marketing Director, Bhinneka Travel</div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="testimonial bg-slate-950 border border-slate-800 rounded-3xl p-7">
+                    <div class="flex gap-1 text-amber-400 mb-4">
+                        <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+                    </div>
+                    <p class="italic leading-relaxed text-slate-300">"Video company profile yang dibuat sangat berkualitas. Banyak klien baru yang datang setelah kami gunakan di presentasi dan website. Highly recommended!"</p>
+                    <div class="mt-6 flex items-center gap-3">
+                        <img src="https://picsum.photos/id/201/40/40" class="w-9 h-9 rounded-full" alt="">
+                        <div>
+                            <div class="font-medium">Sinta Wijaya</div>
+                            <div class="text-xs text-slate-400">Direktur, Mitra Sejahtera Group</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- PROCESS -->
+    <section class="max-w-7xl mx-auto px-6 py-20">
+        <div class="max-w-2xl mb-12">
+            <span class="font-semibold text-indigo-400 text-sm tracking-widest">PROSES KAMI</span>
+            <h2 class="text-5xl tracking-tighter font-semibold mt-2">Cara kami bekerja</h2>
+            <p class="mt-3 text-slate-400">Proses yang transparan, kolaboratif, dan terstruktur untuk menghasilkan output terbaik.</p>
+        </div>
+
+        <div class="grid md:grid-cols-4 gap-6">
+            <div class="relative pl-9 border-l border-slate-700 md:border-none">
+                <div class="absolute -left-[9px] top-1 w-[17px] h-[17px] rounded-full bg-indigo-600 flex items-center justify-center text-[10px] font-mono">01</div>
+                <div class="font-semibold text-lg mb-2">Discovery &amp; Brief</div>
+                <p class="text-sm text-slate-400">Kami menggali kebutuhan, target audiens, dan tujuan bisnis Anda secara mendalam melalui workshop dan riset.</p>
+            </div>
+            <div class="relative pl-9 border-l border-slate-700 md:border-none">
+                <div class="absolute -left-[9px] top-1 w-[17px] h-[17px] rounded-full bg-indigo-600 flex items-center justify-center text-[10px] font-mono">02</div>
+                <div class="font-semibold text-lg mb-2">Strategi &amp; Konsep</div>
+                <p class="text-sm text-slate-400">Penyusunan strategi kreatif, moodboard, wireframe, dan konsep besar yang akan menjadi fondasi seluruh karya.</p>
+            </div>
+            <div class="relative pl-9 border-l border-slate-700 md:border-none">
+                <div class="absolute -left-[9px] top-1 w-[17px] h-[17px] rounded-full bg-indigo-600 flex items-center justify-center text-[10px] font-mono">03</div>
+                <div class="font-semibold text-lg mb-2">Eksekusi &amp; Iterasi</div>
+                <p class="text-sm text-slate-400">Pembuatan desain, development, atau produksi dengan 2-3 ronde revisi terstruktur sampai Anda puas.</p>
+            </div>
+            <div class="relative pl-9 border-l border-slate-700 md:border-none">
+                <div class="absolute -left-[9px] top-1 w-[17px] h-[17px] rounded-full bg-indigo-600 flex items-center justify-center text-[10px] font-mono">04</div>
+                <div class="font-semibold text-lg mb-2">Delivery &amp; Support</div>
+                <p class="text-sm text-slate-400">Penyerahan aset lengkap + dokumentasi. Kami tetap mendampingi untuk implementasi dan pelatihan jika dibutuhkan.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- KONTAK -->
+    <section id="kontak" class="bg-slate-900 border-t border-slate-800 py-20">
+        <div class="max-w-7xl mx-auto px-6 grid md:grid-cols-12 gap-x-16 gap-y-12">
+            <div class="md:col-span-5">
+                <span class="text-indigo-400 font-semibold tracking-widest text-sm">MARI BEKERJA BERSAMA</span>
+                <h2 class="text-5xl font-semibold tracking-tighter mt-3 leading-none">Siap mengembangkan<br>brand Anda?</h2>
+                
+                <div class="mt-10 space-y-7 text-sm">
+                    <div>
+                        <div class="text-slate-400 mb-1">Email</div>
+                        <a href="mailto:hello@creativenetwork.id" class="text-lg font-medium hover:text-indigo-400">hello@creativenetwork.id</a>
+                    </div>
+                    <div>
+                        <div class="text-slate-400 mb-1">WhatsApp</div>
+                        <a href="https://wa.me/6281234567890" target="_blank" class="text-lg font-medium hover:text-indigo-400">+62 812-3456-7890</a>
+                    </div>
+                    <div>
+                        <div class="text-slate-400 mb-1">Studio</div>
+                        <div class="text-lg font-medium">Jl. Kaliurang KM 7, Yogyakarta<br>Indonesia</div>
+                    </div>
+                    
+                    <div class="pt-4 flex gap-4 text-2xl">
+                        <a href="#" class="hover:text-indigo-400 transition-colors"><i class="fa-brands fa-instagram"></i></a>
+                        <a href="#" class="hover:text-indigo-400 transition-colors"><i class="fa-brands fa-linkedin"></i></a>
+                        <a href="#" class="hover:text-indigo-400 transition-colors"><i class="fa-brands fa-behance"></i></a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Contact Form -->
+            <div class="md:col-span-7">
+                <form id="contact-form" class="space-y-5">
+                    <div class="grid grid-cols-1 sm:grid-cols-2 gap-5">
+                        <div>
+                            <label class="text-xs font-medium tracking-wider text-slate-400 block mb-1.5">NAMA LENGKAP</label>
+                            <input type="text" required class="w-full bg-slate-950 border border-slate-700 focus:border-indigo-600 rounded-2xl px-5 py-3 text-sm outline-none placeholder:text-slate-500" placeholder="Nama Anda">
+                        </div>
+                        <div>
+                            <label class="text-xs font-medium tracking-wider text-slate-400 block mb-1.5">EMAIL</label>
+                            <input type="email" required class="w-full bg-slate-950 border border-slate-700 focus:border-indigo-600 rounded-2xl px-5 py-3 text-sm outline-none placeholder:text-slate-500" placeholder="email@perusahaan.com">
+                        </div>
+                    </div>
+                    
+                    <div class="grid grid-cols-1 sm:grid-cols-2 gap-5">
+                        <div>
+                            <label class="text-xs font-medium tracking-wider text-slate-400 block mb-1.5">NAMA PERUSAHAAN</label>
+                            <input type="text" class="w-full bg-slate-950 border border-slate-700 focus:border-indigo-600 rounded-2xl px-5 py-3 text-sm outline-none placeholder:text-slate-500" placeholder="PT. Nama Perusahaan">
+                        </div>
+                        <div>
+                            <label class="text-xs font-medium tracking-wider text-slate-400 block mb-1.5">JENIS LAYANAN</label>
+                            <select class="w-full bg-slate-950 border border-slate-700 focus:border-indigo-600 rounded-2xl px-5 py-3 text-sm outline-none">
+                                <option>Branding &amp; Identitas Visual</option>
+                                <option>Website / Digital Product</option>
+                                <option>Digital Marketing</option>
+                                <option>Produksi Video &amp; Motion</option>
+                                <option>Fotografi &amp; Konten Visual</option>
+                                <option>Konsultasi Kreatif</option>
+                                <option>Proyek Lainnya</option>
+                            </select>
+                        </div>
+                    </div>
+
+                    <div>
+                        <label class="text-xs font-medium tracking-wider text-slate-400 block mb-1.5">CERITAKAN KEBUTUHAN ANDA</label>
+                        <textarea required rows="4" class="w-full resize-y bg-slate-950 border border-slate-700 focus:border-indigo-600 rounded-3xl px-5 py-3.5 text-sm outline-none placeholder:text-slate-500" placeholder="Kami ingin membuat website company profile baru dan rebrand total untuk perusahaan kami yang bergerak di bidang..."></textarea>
+                    </div>
+
+                    <button type="submit" 
+                            class="mt-2 w-full sm:w-auto bg-indigo-600 hover:bg-indigo-500 active:bg-indigo-700 transition-colors text-white font-semibold tracking-wide px-10 py-4 rounded-3xl flex items-center justify-center gap-x-2">
+                        <span>Kirim Brief</span>
+                        <i class="fa-solid fa-paper-plane"></i>
+                    </button>
+                    <p class="text-[11px] text-slate-500">Kami biasanya membalas dalam 1x24 jam kerja.</p>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer class="border-t border-slate-800 py-9 text-xs text-slate-500">
+        <div class="max-w-7xl mx-auto px-6 flex flex-col md:flex-row md:items-center justify-between gap-y-3">
+            <div>© 2026 Creative Network. Semua hak dilindungi.</div>
+            <div class="flex gap-x-5">
+                <a href="#" class="hover:text-slate-300">Privacy</a>
+                <a href="#" class="hover:text-slate-300">Terms</a>
+                <a href="#" class="hover:text-slate-300">Sitemap</a>
+            </div>
+            <div class="text-slate-400">Yogyakarta, Indonesia</div>
+        </div>
+    </footer>
+
+    <!-- Portfolio Modal -->
+    <div id="portfolio-modal" class="hidden fixed inset-0 z-[70] items-center justify-center bg-black/90 p-4 md:p-8">
+        <div class="modal bg-slate-900 rounded-3xl w-full max-w-4xl overflow-hidden border border-slate-700 max-h-[92dvh] overflow-y-auto">
+            <!-- Modal content injected by JS -->
+            <div id="modal-content"></div>
+        </div>
+    </div>
+
+    <script>
+        // Tailwind script configuration
+        function initTailwind() {
+            document.documentElement.style.setProperty('--accent', '#6366f1');
+            
+            // Re-run any dynamic tailwind if needed
+        }
+
+        // Navbar scroll behavior
+        function initNavbar() {
+            const navbar = document.getElementById('navbar');
+            let lastScroll = 0;
+
+            window.addEventListener('scroll', () => {
+                if (window.scrollY > 30) {
+                    navbar.classList.add('nav-scrolled', 'shadow-xl');
+                } else {
+                    navbar.classList.remove('nav-scrolled', 'shadow-xl');
+                }
+            });
+
+            // Active nav link on scroll
+            const sections = ['beranda', 'tentang', 'layanan', 'portfolio', 'kontak'];
+            const navLinks = document.querySelectorAll('.nav-link');
+            const mobileLinks = document.querySelectorAll('.mobile-nav-link');
+
+            window.addEventListener('scroll', () => {
+                let current = '';
+                sections.forEach(id => {
+                    const section = document.getElementById(id);
+                    if (!section) return;
+                    const sectionTop = section.getBoundingClientRect().top;
+                    if (sectionTop <= 180) current = id;
+                });
+
+                navLinks.forEach(link => {
+                    link.classList.remove('active', 'text-white');
+                    if (link.getAttribute('href') === `#${current}`) {
+                        link.classList.add('active', 'text-white');
+                    }
+                });
+            });
+
+            // Smooth scroll for all anchor links
+            document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+                anchor.addEventListener('click', function(e) {
+                    const target = document.querySelector(this.getAttribute('href'));
+                    if (target) {
+                        e.preventDefault();
+                        const offset = 80;
+                        const bodyRect = document.body.getBoundingClientRect().top;
+                        const elementPosition = target.getBoundingClientRect().top;
+                        const offsetPosition = elementPosition - bodyRect - offset;
+
+                        window.scrollTo({
+                            top: offsetPosition,
+                            behavior: 'smooth'
+                        });
+
+                        // Close mobile menu if open
+                        document.getElementById('mobile-menu').classList.add('hidden');
+                    }
+                });
+            });
+        }
+
+        // Mobile menu
+        function initMobileMenu() {
+            const btn = document.getElementById('mobile-menu-btn');
+            const menu = document.getElementById('mobile-menu');
+
+            btn.addEventListener('click', () => {
+                const isHidden = menu.classList.contains('hidden');
+                if (isHidden) {
+                    menu.classList.remove('hidden');
+                    btn.innerHTML = '<i class="fa-solid fa-times"></i>';
+                } else {
+                    menu.classList.add('hidden');
+                    btn.innerHTML = '<i class="fa-solid fa-bars"></i>';
+                }
+            });
+
+            // Close on link click
+            document.querySelectorAll('.mobile-nav-link').forEach(link => {
+                link.addEventListener('click', () => {
+                    menu.classList.add('hidden');
+                    btn.innerHTML = '<i class="fa-solid fa-bars"></i>';
+                });
+            });
+        }
+
+        // Animated counters
+        function initCounters() {
+            const counters = document.querySelectorAll('.stat-number');
+            
+            const animateCounter = (el) => {
+                const target = parseInt(el.dataset.target);
+                const duration = 1400;
+                const start = 0;
+                const increment = target / (duration / 16);
+                let current = start;
+
+                const timer = setInterval(() => {
+                    current += increment;
+                    if (current >= target) {
+                        el.textContent = target;
+                        clearInterval(timer);
+                    } else {
+                        el.textContent = Math.floor(current);
+                    }
+                }, 16);
+            };
+
+            const observer = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        counters.forEach(counter => {
+                            if (!counter.classList.contains('counted')) {
+                                counter.classList.add('counted');
+                                animateCounter(counter);
+                            }
+                        });
+                        observer.disconnect();
+                    }
+                });
+            }, { threshold: 0.6 });
+
+            const statsSection = document.querySelector('.border-y.border-slate-800');
+            if (statsSection) observer.observe(statsSection);
+        }
+
+        // Portfolio Data
+        const portfolioData = [
+            {
+                id: 1,
+                title: "Loka Coffee",
+                category: "branding",
+                subtitle: "Rebranding & Visual Identity",
+                image: "https://picsum.photos/id/1015/800/630",
+                year: "2025",
+                client: "Loka Coffee",
+                description: "Rebranding lengkap untuk kedai kopi spesialti yang sedang berkembang pesat di Yogyakarta dan Jakarta. Kami merancang sistem identitas visual yang hangat, modern, dan mudah diaplikasikan di semua touchpoint.",
+                deliverables: ["Logo & Brandmark", "Brand Guidelines", "Packaging System", "Menu & Signage", "Social Media Kit"],
+                result: "Peningkatan brand recall 68% dalam survei pelanggan setelah 4 bulan peluncuran."
+            },
+            {
+                id: 2,
+                title: "Bhinneka Travel",
+                category: "web",
+                subtitle: "Website & Booking Platform",
+                image: "https://picsum.photos/id/160/800/630",
+                year: "2024",
+                client: "PT Bhinneka Wisata",
+                description: "Redesain total website corporate + sistem booking tour. Fokus pada pengalaman pengguna yang cepat dan konversi tinggi dengan desain yang mencerminkan keindahan Indonesia.",
+                deliverables: ["UI/UX Design", "Next.js Development", "CMS Integration", "Payment Gateway", "SEO Optimization"],
+                result: "Konversi booking naik 2.8x dalam 3 bulan pertama."
+            },
+            {
+                id: 3,
+                title: "Aether Skincare",
+                category: "branding",
+                subtitle: "Premium Skincare Branding",
+                image: "https://picsum.photos/id/1005/800/630",
+                year: "2025",
+                client: "Aether Lab",
+                description: "Penciptaan brand skincare clean beauty premium untuk pasar Indonesia. Pendekatan minimalis, elegan, dengan nuansa ilmiah yang tetap hangat dan approachable.",
+                deliverables: ["Logo & Visual System", "Packaging Design", "Website Launch", "Brand Story & Copy", "Launch Campaign Assets"],
+                result: "Terjual habis dalam pre-order pertama & dipajang di 3 department store besar."
+            },
+            {
+                id: 4,
+                title: "KelasKita",
+                category: "video",
+                subtitle: "Company Profile & Explainer Series",
+                image: "https://picsum.photos/id/251/800/630",
+                year: "2024",
+                client: "KelasKita Edutech",
+                description: "Produksi video company profile 3 menit + 6 video explainer pendek untuk platform edukasi berbasis komunitas. Gaya sinematik dengan sentuhan ramah dan energik.",
+                deliverables: ["Concept & Storyboard", "Shooting", "Motion Graphics", "Voice Over", "Color Grading"],
+                result: "Video digunakan di pitch deck investor dan meningkatkan sign-up 140%."
+            },
+            {
+                id: 5,
+                title: "Nusa Finance",
+                category: "marketing",
+                subtitle: "Digital Campaign & Social",
+                image: "https://picsum.photos/id/201/800/630",
+                year: "2025",
+                client: "Nusa Finance",
+                description: "Kampanye digital 360 derajat untuk meluncurkan produk investasi ritel. Termasuk konten series, iklan Meta & TikTok, serta kolaborasi dengan 12 influencer.",
+                deliverables: ["Campaign Strategy", "Content Production", "Performance Ads", "Influencer Management", "Analytics Dashboard"],
+                result: "Mencapai 4.2 juta reach dengan CAC 38% lebih rendah dari target."
+            },
+            {
+                id: 6,
+                title: "Sagara Resort",
+                category: "web",
+                subtitle: "Luxury Resort Website",
+                image: "https://picsum.photos/id/1016/800/630",
+                year: "2024",
+                client: "Sagara Resort Bali",
+                description: "Website mewah dengan pengalaman imersif untuk resort boutique di Uluwatu. Fokus pada visual yang kuat, booking langsung, dan integrasi dengan sistem operasional hotel.",
+                deliverables: ["Website Design", "Frontend Development", "Custom Booking Engine", "Multilingual", "Performance Optimization"],
+                result: "Direct booking naik 47% dan waktu rata-rata di website meningkat 3,4 menit."
+            }
+        ];
+
+        // Render Portfolio
+        function renderPortfolio(filter = 'all') {
+            const grid = document.getElementById('portfolio-grid');
+            grid.innerHTML = '';
+
+            const filtered = filter === 'all' 
+                ? portfolioData 
+                : portfolioData.filter(item => item.category === filter);
+
+            filtered.forEach(item => {
+                const card = document.createElement('div');
+                card.className = `portfolio-card group bg-slate-900 border border-slate-800 rounded-3xl overflow-hidden cursor-pointer`;
+                card.innerHTML = `
+                    <div class="relative overflow-hidden aspect-[16/12.5]">
+                        <img src="${item.image}" alt="${item.title}" class="w-full h-full object-cover">
+                        <div class="absolute top-4 right-4 bg-black/60 text-white text-xs font-medium px-3 py-1 rounded-full backdrop-blur">
+                            ${item.year}
+                        </div>
+                    </div>
+                    <div class="p-6">
+                        <div class="flex items-center justify-between">
+                            <div>
+                                <div class="font-semibold text-xl tracking-tight">${item.title}</div>
+                                <div class="text-slate-400 text-sm mt-0.5">${item.subtitle}</div>
+                            </div>
+                            <div class="text-indigo-400 opacity-0 group-hover:opacity-100 transition-all">
+                                <i class="fa-solid fa-arrow-up-right-from-square"></i>
+                            </div>
+                        </div>
+                        <div class="mt-4 inline-block text-[10px] uppercase tracking-widest px-3 py-px border border-slate-700 rounded-full text-slate-400">
+                            ${item.category.toUpperCase()}
+                        </div>
+                    </div>
+                `;
+                
+                card.addEventListener('click', () => showPortfolioModal(item));
+                grid.appendChild(card);
+            });
+        }
+
+        // Portfolio Filters
+        function initPortfolioFilters() {
+            const buttons = document.querySelectorAll('#portfolio-filters .filter-btn');
+            
+            buttons.forEach(btn => {
+                btn.addEventListener('click', () => {
+                    // Active state
+                    buttons.forEach(b => b.classList.remove('active', 'bg-white', 'text-slate-950'));
+                    buttons.forEach(b => b.classList.add('bg-slate-900', 'border', 'border-slate-700'));
+                    
+                    btn.classList.add('active', 'bg-white', 'text-slate-950');
+                    btn.classList.remove('bg-slate-900', 'border', 'border-slate-700');
+
+                    const filter = btn.dataset.filter;
+                    renderPortfolio(filter);
+                });
+            });
+            
+            // Initial render
+            renderPortfolio('all');
+        }
+
+        // Modal for Portfolio
+        function showPortfolioModal(item) {
+            const modal = document.getElementById('portfolio-modal');
+            const content = document.getElementById('modal-content');
+
+            let deliverablesHTML = '';
+            item.deliverables.forEach(d => {
+                deliverablesHTML += `<li class="flex items-center gap-2 text-sm py-1"><i class="fa-solid fa-check text-emerald-400 w-3"></i> ${d}</li>`;
+            });
+
+            content.innerHTML = `
+                <div class="relative">
+                    <img src="${item.image}" class="w-full aspect-video object-cover" alt="${item.title}">
+                    
+                    <button onclick="closePortfolioModal()" 
+                            class="absolute top-4 right-4 bg-black/70 hover:bg-black/90 text-white w-10 h-10 flex items-center justify-center rounded-2xl text-xl">
+                        <i class="fa-solid fa-times"></i>
+                    </button>
+                </div>
+
+                <div class="p-8 md:p-10">
+                    <div class="flex items-center gap-x-3 mb-3">
+                        <span class="px-4 py-1 bg-slate-800 rounded-full text-xs tracking-wider font-medium">${item.category.toUpperCase()}</span>
+                        <span class="text-slate-400 text-sm">${item.year} • ${item.client}</span>
+                    </div>
+                    
+                    <h3 class="text-4xl font-semibold tracking-tighter mb-2">${item.title}</h3>
+                    <p class="text-xl text-slate-400">${item.subtitle}</p>
+
+                    <div class="my-8 text-[15px] leading-relaxed text-slate-300 max-w-2xl">
+                        ${item.description}
+                    </div>
+
+                    <div class="grid md:grid-cols-2 gap-x-12 gap-y-8">
+                        <div>
+                            <div class="uppercase text-xs font-semibold tracking-widest text-slate-400 mb-3">Deliverables</div>
+                            <ul class="space-y-0.5">
+                                ${deliverablesHTML}
+                            </ul>
+                        </div>
+                        <div>
+                            <div class="uppercase text-xs font-semibold tracking-widest text-slate-400 mb-3">Hasil</div>
+                            <p class="text-sm leading-relaxed text-emerald-300">${item.result}</p>
+                            
+                            <div class="mt-8 flex gap-3">
+                                <button onclick="closePortfolioModal()" 
+                                        class="flex-1 px-6 py-3 rounded-2xl border border-slate-700 hover:bg-slate-800 text-sm font-medium transition-colors">
+                                    Tutup
+                                </button>
+                                <button onclick="contactFromModal()" 
+                                        class="flex-1 px-6 py-3 rounded-2xl bg-white text-slate-950 font-semibold text-sm hover:bg-slate-200 transition-colors">
+                                    Diskusikan Proyek Serupa
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            `;
+
+            modal.classList.remove('hidden');
+            modal.classList.add('flex');
+            
+            // Close on outside click
+            modal.onclick = function(e) {
+                if (e.target === modal) closePortfolioModal();
+            };
+        }
+
+        window.closePortfolioModal = function() {
+            const modal = document.getElementById('portfolio-modal');
+            modal.classList.remove('flex');
+            modal.classList.add('hidden');
+        }
+
+        window.contactFromModal = function() {
+            closePortfolioModal();
+            setTimeout(() => {
+                document.getElementById('kontak').scrollIntoView({ behavior: 'smooth', block: 'start' });
+            }, 180);
+        }
+
+        // Contact form handling
+        function initContactForm() {
+            const form = document.getElementById('contact-form');
+            
+            form.addEventListener('submit', function(e) {
+                e.preventDefault();
+                
+                const btn = form.querySelector('button[type="submit"]');
+                const originalText = btn.innerHTML;
+                
+                btn.disabled = true;
+                btn.innerHTML = `<span>Mengirim...</span>`;
+
+                // Simulate sending (in real use, integrate with Formspree, EmailJS, or backend)
+                setTimeout(() => {
+                    btn.innerHTML = `<span class="flex items-center gap-x-2"><i class="fa-solid fa-check"></i> Terkirim! Terima kasih.</span>`;
+                    btn.classList.add('!bg-emerald-600');
+                    
+                    setTimeout(() => {
+                        form.reset();
+                        btn.disabled = false;
+                        btn.innerHTML = originalText;
+                        btn.classList.remove('!bg-emerald-600');
+                        
+                        // Show nice success toast
+                        showToast();
+                    }, 2100);
+                }, 1350);
+            });
+        }
+
+        function showToast() {
+            const toast = document.createElement('div');
+            toast.className = `fixed bottom-6 left-1/2 -translate-x-1/2 bg-slate-800 border border-slate-700 text-white px-6 py-3.5 rounded-3xl shadow-2xl flex items-center gap-x-3 text-sm z-[90]`;
+            toast.innerHTML = `
+                <i class="fa-solid fa-check-circle text-emerald-400"></i>
+                <span>Brief Anda telah kami terima. Tim kami akan menghubungi dalam 24 jam.</span>
+            `;
+            document.body.appendChild(toast);
+            
+            setTimeout(() => {
+                toast.style.transition = 'all .25s ease';
+                toast.style.opacity = '0';
+                setTimeout(() => toast.remove(), 200);
+            }, 4200);
+        }
+
+        // Fade in on scroll (simple reveal)
+        function initScrollReveal() {
+            const elements = document.querySelectorAll('.service-card, .portfolio-card, .testimonial');
+            
+            const observer = new IntersectionObserver((entries) => {
+                entries.forEach((entry, i) => {
+                    if (entry.isIntersecting) {
+                        setTimeout(() => {
+                            entry.target.classList.add('fade-in', 'visible');
+                        }, i * 70);
+                        observer.unobserve(entry.target);
+                    }
+                });
+            }, { threshold: 0.12 });
+
+            elements.forEach(el => {
+                el.classList.add('fade-in');
+                observer.observe(el);
+            });
+        }
+
+        // Keyboard support for modal
+        function initKeyboard() {
+            document.addEventListener('keydown', (e) => {
+                if (e.key === 'Escape') {
+                    const modal = document.getElementById('portfolio-modal');
+                    if (!modal.classList.contains('hidden')) {
+                        closePortfolioModal();
+                    }
+                }
+            });
+        }
+
+        // Initialize everything
+        function init() {
+            initTailwind();
+            initNavbar();
+            initMobileMenu();
+            initCounters();
+            initPortfolioFilters();
+            initContactForm();
+            initScrollReveal();
+            initKeyboard();
+
+            // Make first nav link active initially
+            const firstNav = document.querySelector('.nav-link[href="#beranda"]');
+            if (firstNav) firstNav.classList.add('active', 'text-white');
+
+            // Log ready (for developer)
+            console.log('%c[Creative Network] Company profile website initialized.', 'color:#64748b');
+        }
+
+        // Boot
+        window.onload = init;
+    </script>
+</body>
+</html>
