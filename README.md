@@ -50,16 +50,49 @@ git remote add origin https://github.com/ucupcreativenetwork-glitch/creative-net
 git push -u origin main
 ```
 
+## Autodeploy (GitHub Actions → aaPanel)
+
+Setiap `git push` ke branch `main` akan otomatis deploy ke server.
+
+### Langkah sekali saja
+
+1. **Cari IP asli server** (bukan IP Cloudflare `104.x` / `172.x`):
+   - Login Cloudflare → DNS → lihat record A dengan proxy **OFF** (abu-abu), atau
+   - Login aaPanel → Website → creativenetwork.my.id → lihat IP server
+
+2. **Generate SSH key** (sudah dibuat di PC):
+   ```powershell
+   powershell -ExecutionPolicy Bypass -File scripts\setup-github-secrets.ps1
+   ```
+
+3. **Pasang public key di server** (SSH ke aaPanel):
+   ```bash
+   # Tambahkan public key ke authorized_keys user deploy (root/www)
+   echo "ssh-ed25519 AAAA... github-actions-creative-network" >> ~/.ssh/authorized_keys
+   ```
+
+4. **Tambah GitHub Secrets** → https://github.com/ucupcreativenetwork-glitch/creative-network/settings/secrets/actions
+
+   | Secret | Nilai |
+   |--------|-------|
+   | `SSH_HOST` | IP asli server (bukan Cloudflare) |
+   | `SSH_USER` | `root` atau user SSH aaPanel |
+   | `SSH_PRIVATE_KEY` | Isi file `C:\Users\TNN IT\.ssh\creative-network-deploy\id_ed25519` |
+   | `DEPLOY_PATH` | `/www/wwwroot/creativenetwork.my.id` |
+   | `SSH_PORT` | `22` (opsional) |
+
+5. **Cek deploy** → GitHub → Actions → workflow "Deploy creativenetwork.my.id"
+
+### Manual trigger
+GitHub → Actions → Run workflow (workflow_dispatch)
+
 ## Setelah Push ke GitHub
 
 - Repo: https://github.com/ucupcreativenetwork-glitch/creative-network
-- Opsional: aktifkan GitHub Pages (Settings → Pages → Deploy from main branch)
 - Untuk production di aaPanel:
-  - Clone repo di server, atau
-  - Upload folder (kecuali yang di-.gitignore)
+  - Autodeploy via GitHub Actions (disarankan), atau upload manual
   - Terapkan `deploy/nginx-security.conf` atau `.htaccess`
   - Aktifkan SSL Let's Encrypt
-  - Restrict Web3Forms key ke domain kamu
 
 ## Keamanan yang Sudah Diterapkan
 
