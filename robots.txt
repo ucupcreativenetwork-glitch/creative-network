@@ -1,0 +1,6 @@
+User-agent: *
+Allow: /
+
+Disallow: /deploy/
+
+Sitemap: https://creativenetwork.my.id/sitemap.xml

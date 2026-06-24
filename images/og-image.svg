@@ -1,0 +1,16 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 630" fill="none">
+  <rect width="1200" height="630" fill="#0F172A"/>
+  <rect x="0" y="0" width="1200" height="630" fill="url(#g)" opacity="0.4"/>
+  <defs>
+    <radialGradient id="g" cx="80%" cy="20%" r="60%">
+      <stop stop-color="#553C9A"/>
+      <stop offset="1" stop-color="#0F172A" stop-opacity="0"/>
+    </radialGradient>
+  </defs>
+  <rect x="80" y="80" width="72" height="72" rx="16" fill="#553C9A"/>
+  <text x="116" y="128" text-anchor="middle" font-family="system-ui,sans-serif" font-size="28" font-weight="700" fill="#FFFFFF">CN</text>
+  <text x="80" y="220" font-family="system-ui,sans-serif" font-size="56" font-weight="800" fill="#FFFFFF">Creative Network</text>
+  <text x="80" y="290" font-family="system-ui,sans-serif" font-size="28" fill="#C4B5FD">From Hardware to Networks,</text>
+  <text x="80" y="330" font-family="system-ui,sans-serif" font-size="28" fill="#C4B5FD">We've Got You Covered</text>
+  <text x="80" y="400" font-family="system-ui,sans-serif" font-size="22" fill="#94A3B8">IT Support · Network · CCTV · Server &amp; Cloud · Kudus</text>
+</svg>

@@ -1,0 +1,8 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 500" fill="none">
+  <rect width="800" height="500" fill="#18181B"/>
+  <rect x="300" y="180" width="200" height="120" rx="12" fill="#27272A" stroke="#6D28D9" stroke-width="2"/>
+  <circle cx="400" cy="230" r="28" fill="#553C9A" opacity="0.5"/>
+  <circle cx="400" cy="230" r="14" fill="#C4B5FD"/>
+  <rect x="380" y="300" width="40" height="60" fill="#3f3f46"/>
+  <text x="400" y="420" text-anchor="middle" font-family="system-ui,sans-serif" font-size="14" fill="#94A3B8">Foto proyek: cctv.jpg</text>
+</svg>

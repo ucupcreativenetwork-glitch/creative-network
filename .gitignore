@@ -1,0 +1,39 @@
+﻿# Sistem Operasi
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# Editor / IDE
+.vscode/
+.idea/
+*.sublime-*
+*.swp
+
+# Log dan temporary
+*.log
+*.tmp
+*.bak
+
+# Folder dan file lokal / development only
+deploy/
+jalankan-website.bat
+CARA-GANTI-FOTO.txt
+
+# Jika suatu saat pakai Node / build tools
+node_modules/
+dist/
+build/
+.cache/
+
+# Environment files (meski static site)
+.env
+.env.local
+.env.*.local
+
+# Backup & zip lokal
+*.zip
+*.7z
+backup/
+
+# Windows specific
+$RECYCLE.BIN/

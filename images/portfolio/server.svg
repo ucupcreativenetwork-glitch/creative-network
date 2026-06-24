@@ -1,0 +1,8 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 500" fill="none">
+  <rect width="800" height="500" fill="#0F172A"/>
+  <rect x="280" y="140" width="240" height="50" rx="6" fill="#1E293B" stroke="#553C9A" stroke-width="2"/>
+  <rect x="280" y="210" width="240" height="50" rx="6" fill="#1E293B" stroke="#553C9A" stroke-width="2"/>
+  <rect x="280" y="280" width="240" height="50" rx="6" fill="#1E293B" stroke="#553C9A" stroke-width="2"/>
+  <circle cx="490" cy="165" r="5" fill="#22C55E"/><circle cx="490" cy="235" r="5" fill="#22C55E"/><circle cx="490" cy="305" r="5" fill="#EAB308"/>
+  <text x="400" y="420" text-anchor="middle" font-family="system-ui,sans-serif" font-size="14" fill="#94A3B8">Foto proyek: server.jpg</text>
+</svg>
